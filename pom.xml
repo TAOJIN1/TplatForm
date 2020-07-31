@@ -89,7 +89,7 @@
         <poi.version>3.15</poi.version>
         <data-commons>2.1.6.RELEASE</data-commons>
         <tpatlform_context.version>1.0-SNAPSHOT</tpatlform_context.version>
-     </properties>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -148,5 +148,4 @@
             </resource>
         </resources>
     </build>
-
 </project>
