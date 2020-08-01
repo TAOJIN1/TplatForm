@@ -14,6 +14,7 @@
         <module>tplatform_proposal</module>
         <module>tplatform_configserver</module>
         <module>tpatlform_context</module>
+        <module>tplatform_wechat</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>

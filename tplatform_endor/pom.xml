@@ -7,7 +7,12 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>tplatform_endor</name>
     <description>T平台批改项目</description>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
@@ -26,21 +31,25 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.mybatis</groupId>
-        <artifactId>mybatis</artifactId>
-        <version>3.5.5</version>
-    </dependency>
-    <dependency>
         <groupId>com.taikang</groupId>
         <artifactId>tpatlform_context</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <scope>compile</scope>
     </dependency>
     <dependency>
-        <groupId>com.taikang</groupId>
-        <artifactId>tpatlform_context</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <scope>compile</scope>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+        <exclusions>
+            <exclusion>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-openfeign-core</artifactId>
+        <version>2.2.3.RELEASE</version>
     </dependency>
 </dependencies>
     <dependencyManagement>

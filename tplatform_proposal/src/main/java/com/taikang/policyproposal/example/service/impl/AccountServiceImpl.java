@@ -7,6 +7,7 @@ import com.taikang.policyproposal.example.model.AccountTblExample;
 import com.taikang.policyproposal.example.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,5 +28,16 @@ public class AccountServiceImpl  implements AccountService {
          AccountTblExample accountTblExample=new AccountTblExample();
         List<AccountTbl> accountTblas=  accountTblMapper.selectByExample(accountTblExample);
         return accountTblas;
+    }
+
+    @TargetDataSource(name = "workflowDS")
+    @Transactional
+    public void saveAccountTbl() {
+         AccountTbl accountTbl=new AccountTbl();
+         accountTbl.setId(111);
+         accountTbl.setMoney(2323);
+         accountTbl.setUserId("32323");
+         accountTblMapper.insert(accountTbl);
+         throw  new RuntimeException();
     }
 }

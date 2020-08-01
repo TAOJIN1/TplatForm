@@ -13,4 +13,5 @@ import java.util.List;
 public interface AccountService {
 
     List<AccountTbl> queryAccountTbl();
+    void saveAccountTbl();
 }

@@ -21,7 +21,7 @@
       <module name="tpatform_eureka" options="" />
       <module name="tpatlform_context" options="" />
       <module name="tplatform_configserver" options="" />
-      <module name="tplatform_endor" options="" />
+      <module name="tplatform_endor" options="-parameters" />
       <module name="tplatform_proposal" options="" />
       <module name="tplatform_wechat" options="-parameters" />
     </option>
