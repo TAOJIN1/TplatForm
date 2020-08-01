@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <type id="Spring" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -10,6 +13,8 @@
         <option value="$PROJECT_DIR$/tplatform_configserver/pom.xml" />
         <option value="$PROJECT_DIR$/tpatform_eureka/pom.xml" />
         <option value="$PROJECT_DIR$/tplatform_wechat/pom.xml" />
+        <option value="$PROJECT_DIR$/tplatform_exchangedata/pom.xml" />
+        <option value="$PROJECT_DIR$/tplatform_core/pom.xml" />
       </list>
     </option>
   </component>

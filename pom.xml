@@ -14,6 +14,7 @@
         <module>tplatform_proposal</module>
         <module>tplatform_configserver</module>
         <module>tpatlform_context</module>
+        <module>tplatform_wechat</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>
@@ -89,7 +90,7 @@
         <poi.version>3.15</poi.version>
         <data-commons>2.1.6.RELEASE</data-commons>
         <tpatlform_context.version>1.0-SNAPSHOT</tpatlform_context.version>
-     </properties>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -109,6 +110,10 @@
                 <version>${springCloud.dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -148,5 +153,4 @@
             </resource>
         </resources>
     </build>
-
 </project>

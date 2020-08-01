@@ -2,11 +2,12 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tpaltform_until" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tpatform_eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tpatlform_context" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tplatform_configserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tplatform_core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tplatform_endor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tplatform_exchangedata" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tplatform_proposal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tplatform_wechat" charset="UTF-8" />
   </component>
