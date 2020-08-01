@@ -17,7 +17,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @Configuration
 public class FilterGenarate {
     /**
-     * 日志监控过滤器
+     * 接口请求监控
      * @return
      */
     @Bean
@@ -46,7 +46,7 @@ public class FilterGenarate {
     }
 
     /****
-     *  异常同意处理入口过滤器
+     *  异常统一处理类处理入口过滤器
      * @return
      */
     @Bean

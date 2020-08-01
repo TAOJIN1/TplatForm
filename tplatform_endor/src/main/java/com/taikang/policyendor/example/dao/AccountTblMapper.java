@@ -3,8 +3,11 @@ package com.taikang.policyendor.example.dao;
 import com.taikang.policyendor.example.model.AccountTbl;
 import com.taikang.policyendor.example.model.AccountTblExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface AccountTblMapper {
     int countByExample(AccountTblExample example);
 

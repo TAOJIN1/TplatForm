@@ -1,4 +1,4 @@
-package com.taikang.tplatform_wechat;
+package com.taikang.tplatformwechat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

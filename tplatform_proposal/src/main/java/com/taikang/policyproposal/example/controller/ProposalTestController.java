@@ -5,6 +5,7 @@ import com.taikang.policyproposal.example.service.AccountService;
 import com.taikang.redisrelated.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +19,6 @@ import java.util.List;
 @RequestMapping("/test")
 public class ProposalTestController {
 
-
     @Value("${testValue}")
     private String testValue;
 
@@ -27,6 +27,7 @@ public class ProposalTestController {
 
     @Autowired
     RedisClient redisClient;
+
     @GetMapping("/getStore/{id}")
     public String getStore(@PathVariable("id") String id) {
         System.out.println("测试输出" + id);
@@ -34,9 +35,9 @@ public class ProposalTestController {
         return "";
     }
 
-
     @GetMapping("/testQuery")
-    public List<AccountTbl> testQuery() {
+    public List<AccountTbl> testQuery() throws InterruptedException {
+        Thread.sleep(3000);
         return accountService.queryAccountTbl();
     }
 
@@ -55,6 +56,21 @@ public class ProposalTestController {
     public Object testForRedis(){
         redisClient.set("test",23423);
         return  redisClient.get("test");
-
     }
+
+    @GetMapping("testForCache")
+    public Object testForCache(){
+        return  accountService.cacheAccountTbl("test");
+    }
+
+    @GetMapping("testForGetCache/{testValue}")
+    @Cacheable(value = "SystemCacherewrew",key = "#testValue")
+    public List<Object> testForGetCache(@PathVariable String testValue){
+        return  null;
+    }
+
+
+
+
+
 }

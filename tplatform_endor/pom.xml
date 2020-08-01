@@ -17,7 +17,7 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
     </properties>
-<dependencies>
+    <dependencies>
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-config</artifactId>
@@ -31,11 +31,17 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-json</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <scope>compile</scope>
+    </dependency>
+    <dependency>
         <groupId>com.taikang</groupId>
         <artifactId>tpatlform_context</artifactId>
         <version>1.0-SNAPSHOT</version>
     </dependency>
-    <dependency>
+     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
@@ -45,22 +51,26 @@
                 <artifactId>junit-vintage-engine</artifactId>
             </exclusion>
         </exclusions>
-    </dependency>
+       </dependency>
+       <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+       </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
+<dependencyManagement>
+<dependencies>
     <dependency>
         <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-openfeign-core</artifactId>
-        <version>2.2.3.RELEASE</version>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
     </dependency>
 </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+</dependencyManagement>
+
 </project>

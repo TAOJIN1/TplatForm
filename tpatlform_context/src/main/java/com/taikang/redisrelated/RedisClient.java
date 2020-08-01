@@ -1,11 +1,13 @@
 package com.taikang.redisrelated;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -82,6 +84,23 @@ public class RedisClient {
         result = operations.get(key);
         return result;
     }
+
+    /**
+     * 读取缓存
+     *
+     * @param key
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    public List<Object> getList(final String key,int idnex,int end) {
+        List<Object> result = null;
+        ListOperations  operations = redisTemplate
+                .opsForList();
+        result = operations.range(key,idnex,end);
+        return result;
+    }
+
+
 
     /**
      * 写入缓存

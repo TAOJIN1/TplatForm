@@ -14,4 +14,5 @@ public interface AccountService {
 
     List<AccountTbl> queryAccountTbl();
     void saveAccountTbl();
+    List<AccountTbl> cacheAccountTbl(String key);
 }

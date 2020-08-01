@@ -27,17 +27,14 @@ class WebMvcConf  implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-		/****跨域配置
-		 *
-		 */
+		/****跨域配置*/
 		registry.addMapping("/**")
             .allowedOrigins("*")
             .allowCredentials(true)
             .allowedMethods("GET", "POST", "PUT", "OPTIONS")
             .maxAge(3600);
 
-
-    }
+     }
 
 	/****
 	 * 处理框架返回对象默认为 json

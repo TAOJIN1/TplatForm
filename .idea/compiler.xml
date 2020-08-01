@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tpatlform_context" />
+        <module name="tplatform_core" />
         <module name="tplatform_endor" />
+        <module name="tplatform_exchangedata" />
         <module name="tplatform_wechat" />
       </profile>
     </annotationProcessing>
@@ -21,7 +23,9 @@
       <module name="tpatform_eureka" options="" />
       <module name="tpatlform_context" options="" />
       <module name="tplatform_configserver" options="" />
+      <module name="tplatform_core" options="-parameters" />
       <module name="tplatform_endor" options="-parameters" />
+      <module name="tplatform_exchangedata" options="-parameters" />
       <module name="tplatform_proposal" options="" />
       <module name="tplatform_wechat" options="-parameters" />
     </option>

@@ -1,5 +1,6 @@
 package com.taikang.policyendor.example.service.impl;
 
+import com.taikang.datasource.TargetDataSource;
 import com.taikang.policyendor.example.dao.AccountTblMapper;
 import com.taikang.policyendor.example.model.AccountTbl;
 import com.taikang.policyendor.example.service.AccountService;
@@ -20,7 +21,7 @@ public class AccountServiceImpl  implements AccountService {
      @Autowired
      AccountTblMapper accountTblMapper;
 
-    @TargetDataSource
+    @TargetDataSource(name = "")
      public List<AccountTbl> queryAccountTbl() {
         return null;
     }

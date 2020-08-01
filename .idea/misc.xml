@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/tplatform_configserver/pom.xml" />
         <option value="$PROJECT_DIR$/tpatform_eureka/pom.xml" />
         <option value="$PROJECT_DIR$/tplatform_wechat/pom.xml" />
+        <option value="$PROJECT_DIR$/tplatform_exchangedata/pom.xml" />
+        <option value="$PROJECT_DIR$/tplatform_core/pom.xml" />
       </list>
     </option>
   </component>
